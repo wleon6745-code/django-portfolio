@@ -63,9 +63,21 @@
                 <img class="img-fluid avatar" src="{% static 'img/avatar.jpg' %}" alt="Foto de Wilmer">
             </div>
             <div class="col-lg-7 col-md-8">
-                <h2 class="section-heading">Wilmer León</h2>
-                <p>Nacido en Portoviejo, apasionado por la programación y las bases de datos. Actualmente aprendiendo Django y PyCharm para desarrollar aplicaciones web.</p>
-                <p>Me interesa la administración de redes, las bases de datos y la creación de proyectos prácticos que traduzcan la teoría en soluciones reales.</p>
+               <h2 class="section-heading">
+                    {{ persona.nombres }} {{ persona.apellidos }}
+                </h2>
+
+                <p><strong>{{ persona.titulo_academico }}</strong></p>
+
+                <p>{{ persona.biografia }}</p>
+
+                <p><strong>Dirección:</strong> {{ persona.direccion }}</p>
+
+                <p><strong>Teléfono:</strong> {{ persona.telefono }}</p>
+
+                <p><strong>Correo:</strong> {{ persona.correo_electronico }}</p>
+
+                <p><strong>Dedicación:</strong> {{ persona.dedicacion_persona }}</p>
             </div>
         </div>
     </div>

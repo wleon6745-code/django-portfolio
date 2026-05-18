@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Portfolio
+from .models import Persona
 
 def home(request):
     return render(request, 'index.html')
@@ -17,3 +18,8 @@ def portfolio(request):
 
 def contact(request):
     return render(request, 'contact.html')
+def about(request):
+    persona = Persona.objects.first()
+    return render(request, "about.html", {
+        'persona': persona
+    })
